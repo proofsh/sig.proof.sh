@@ -5,7 +5,7 @@ Proof email signature assets, hosted via GitHub Pages at [sig.proof.sh](https://
 ## What's here
 
 - `front_default.html` -- the main email signature template for **Missive** (uses `{{user.name}}`, `{{user.custom.title}}`, etc.). Filename is legacy from a previous Front deployment; Missive uses the same template variable syntax so it wasn't worth renaming and breaking the external URL reference.
-- `proof_full_color_sig.png` -- current Proof logo used by the signature (107×72 source, rendered at 53×36)
+- `proof_full_color_sig.png` -- current Proof logo used by the signature (143×96 source, rendered at 71×48)
 - `proof_full_color-{sm,md,lg}.webp` -- WebP variants of the Proof logo
 - Legacy `pg-*` / `P+g_*` / `pg_logo_*` assets from the Proof+Geist era (kept so any pre-rebrand signatures already cached in email clients continue to resolve; don't link to them in new templates)
 
@@ -20,7 +20,7 @@ The template uses Missive's variable syntax so each team member gets their name 
 ## Design rules
 
 - Logo appears first in the signature
-- Logo height: 36px (current logo aspect ratio is 1.48:1 → 53px wide at 36px tall)
+- Logo height: 48px (current logo aspect ratio is 1.48:1 → 71px wide at 48px tall)
 - Use the PNG served from `https://sig.proof.sh/` (not the WebP, for broader email-client compatibility — Outlook desktop in particular is spotty on WebP)
 - Canonical logo source lives in the sibling repo `../proof-marketing-assets/Full Logo/Full Color_Logo.svg`; regenerate the PNG from that SVG if you need to resize
 
