@@ -4,7 +4,7 @@ Proof email signature assets, hosted via GitHub Pages at [sig.proof.sh](https://
 
 ## What's here
 
-- `front_default.html` -- the main email signature template for Front (uses `{{user.name}}`, `{{user.custom.title}}`, etc.)
+- `front_default.html` -- the main email signature template for **Missive** (uses `{{user.name}}`, `{{user.custom.title}}`, etc.). Filename is legacy from a previous Front deployment; Missive uses the same template variable syntax so it wasn't worth renaming and breaking the external URL reference.
 - `proof_full_color_sig.png` -- current Proof logo used by the signature (107×72 source, rendered at 53×36)
 - `proof_full_color-{sm,md,lg}.webp` -- WebP variants of the Proof logo
 - Legacy `pg-*` / `P+g_*` / `pg_logo_*` assets from the Proof+Geist era (kept so any pre-rebrand signatures already cached in email clients continue to resolve; don't link to them in new templates)
@@ -13,7 +13,9 @@ Proof email signature assets, hosted via GitHub Pages at [sig.proof.sh](https://
 
 Edit `front_default.html`. Changes go live on push to main (GitHub Pages, hosted at `sig.proof.sh`).
 
-The template uses Front's variable syntax so each team member gets their name and title automatically.
+The template uses Missive's variable syntax so each team member gets their name and title automatically.
+
+**When changing the logo, bump the `?v=YYYY-MM-DD` query param** on the image URL. This busts Cloudflare + email-client caches of any previously-served version (including stale 404s from before the file existed). The server ignores the query string, so the same PNG is served regardless — the query just forces cache revalidation.
 
 ## Design rules
 
